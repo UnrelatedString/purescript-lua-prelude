@@ -38,6 +38,7 @@ module Prelude
   , module Data.Show
   , module Data.Unit
   , module Data.Void
+  , pass
   ) where
 
 import Control.Applicative (class Applicative, pure, liftA1, unless, when)
@@ -68,3 +69,6 @@ import Data.Semiring (class Semiring, add, mul, one, zero, (*), (+))
 import Data.Show (class Show, show)
 import Data.Unit (Unit, unit)
 import Data.Void (Void, absurd)
+
+pass :: forall f. Applicative f => f Unit
+pass = pure unit
