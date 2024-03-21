@@ -16,22 +16,20 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         epkgs = import easyps { inherit pkgs; };
-        lpkgs = pkgs.lua53Packages;
+        lpkgs = pkgs.lua51Packages;
       in {
         devShell = pkgs.mkShell {
-          buildInputs = with epkgs;
-            with pkgs;
-            with lpkgs; [
-              dhall
-              lua
-              luacheck
-              luaformatter
-              nixfmt
+          buildInputs = [
+              pkgs.dhall
+              lpkgs.lua
+              lpkgs.luacheck
+              pkgs.luaformatter
+              pkgs.nixfmt
               pslua.packages.${system}.default
-              purescript
-              purs-tidy
-              spago
-              treefmt
+              epkgs.purescript
+              epkgs.purs-tidy
+              epkgs.spago
+              pkgs.treefmt
             ];
         };
       });
