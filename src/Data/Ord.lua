@@ -17,12 +17,12 @@ local unsafeCoerceImpl = function(lt)
 end
 
 return {
-  ordBooleanImpl = unsafeCoerceImpl,
-  ordIntImpl = unsafeCoerceImpl,
-  ordNumberImpl = unsafeCoerceImpl,
-  ordStringImpl = unsafeCoerceImpl,
-  ordCharImpl = unsafeCoerceImpl,
-  ordArrayImpl = function(f)
+  ordBooleanImpl = (unsafeCoerceImpl),
+  ordIntImpl = (unsafeCoerceImpl),
+  ordNumberImpl = (unsafeCoerceImpl),
+  ordStringImpl = (unsafeCoerceImpl),
+  ordCharImpl = (unsafeCoerceImpl),
+  ordArrayImpl = (function(f)
     return function(xs)
       return function(ys)
         local i = 1
@@ -44,5 +44,5 @@ return {
         end
       end
     end
-  end
+  end)
 }

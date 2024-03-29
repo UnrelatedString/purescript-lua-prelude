@@ -1,5 +1,5 @@
 return {
-  arrayApply = function(fs)
+  arrayApply = (function(fs)
     return function(xs)
       local n, l, m, result = 1, #fs, #xs, {}
       for i = 1, l do
@@ -10,5 +10,5 @@ return {
       end
       return result
     end
-  end
+  end)
 }

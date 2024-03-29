@@ -1,5 +1,5 @@
 return {
-  arrayBind = function(arr)
+  arrayBind = (function(arr)
     return function(f)
       local n = 1
       local result = {}
@@ -11,5 +11,5 @@ return {
       end
       return result
     end
-  end
+  end)
 }

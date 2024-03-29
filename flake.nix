@@ -14,22 +14,22 @@
   outputs = { self, nixpkgs, flake-utils, easyps, pslua }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        epkgs = import easyps { inherit pkgs; };
-        lpkgs = pkgs.lua51Packages;
+        p = nixpkgs.legacyPackages.${system};
+        e = import easyps { pkgs = p; };
+        l = p.lua51Packages;
       in {
-        devShell = pkgs.mkShell {
+        devShell = p.mkShell {
           buildInputs = [
-              pkgs.dhall
-              lpkgs.lua
-              lpkgs.luacheck
-              pkgs.luaformatter
-              pkgs.nixfmt
+              p.dhall
+              l.lua
+              l.luacheck
+              p.luaformatter
+              p.nixfmt
               pslua.packages.${system}.default
-              epkgs.purescript
-              epkgs.purs-tidy
-              epkgs.spago
-              pkgs.treefmt
+              e.purs-0_15_15
+              e.purs-tidy
+              e.spago
+              p.treefmt
             ];
         };
       });

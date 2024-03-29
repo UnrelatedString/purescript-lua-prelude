@@ -1,1 +1,1 @@
-return {unsafeCoerce = function(a) return a end}
+return {unsafeCoerce = (function(a) return a end)}

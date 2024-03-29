@@ -1,4 +1,4 @@
 [formatter.lua]
 command = "lua-format"
-options = ["--in-place", "--indent-width=2"]
-includes = ["src/**/*.lua"]
+options = ["--in-place"]
+includes = ["src/**/*.lua", "test/**/*.lua", "dist/*.lua"]
