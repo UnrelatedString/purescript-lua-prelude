@@ -3,3 +3,54 @@
 echo "Building..."
 
 spago build
+
+pslua --foreign-path . --ps-output output --entry Record.Unsafe --lua-output-file dist/Record.Unsafe.lua
+pslua --foreign-path . --ps-output output --entry Data.Void --lua-output-file dist/Data.Void.lua
+pslua --foreign-path . --ps-output output --entry Data.Unit --lua-output-file dist/Data.Unit.lua
+pslua --foreign-path . --ps-output output --entry Data.NaturalTransformation --lua-output-file dist/Data.NaturalTransformation.lua
+pslua --foreign-path . --ps-output output --entry Type.Proxy --lua-output-file dist/Type.Proxy.lua
+pslua --foreign-path . --ps-output output --entry Data.Boolean --lua-output-file dist/Data.Boolean.lua
+pslua --foreign-path . --ps-output output --entry Control.Semigroupoid --lua-output-file dist/Control.Semigroupoid.lua
+pslua --foreign-path . --ps-output output --entry Data.Symbol --lua-output-file dist/Data.Symbol.lua
+pslua --foreign-path . --ps-output output --entry Control.Category --lua-output-file dist/Control.Category.lua
+pslua --foreign-path . --ps-output output --entry Data.Semigroup --lua-output-file dist/Data.Semigroup.lua
+pslua --foreign-path . --ps-output output --entry Data.HeytingAlgebra --lua-output-file dist/Data.HeytingAlgebra.lua
+pslua --foreign-path . --ps-output output --entry Data.Semiring --lua-output-file dist/Data.Semiring.lua
+pslua --foreign-path . --ps-output output --entry Data.Show --lua-output-file dist/Data.Show.lua
+pslua --foreign-path . --ps-output output --entry Data.Ring --lua-output-file dist/Data.Ring.lua
+pslua --foreign-path . --ps-output output --entry Data.Generic.Rep --lua-output-file dist/Data.Generic.Rep.lua
+pslua --foreign-path . --ps-output output --entry Data.BooleanAlgebra --lua-output-file dist/Data.BooleanAlgebra.lua
+pslua --foreign-path . --ps-output output --entry Data.Eq --lua-output-file dist/Data.Eq.lua
+pslua --foreign-path . --ps-output output --entry Data.CommutativeRing --lua-output-file dist/Data.CommutativeRing.lua
+pslua --foreign-path . --ps-output output --entry Data.Ordering --lua-output-file dist/Data.Ordering.lua
+pslua --foreign-path . --ps-output output --entry Data.EuclideanRing --lua-output-file dist/Data.EuclideanRing.lua
+pslua --foreign-path . --ps-output output --entry Data.Ord --lua-output-file dist/Data.Ord.lua
+pslua --foreign-path . --ps-output output --entry Data.DivisionRing --lua-output-file dist/Data.DivisionRing.lua
+pslua --foreign-path . --ps-output output --entry Data.Field --lua-output-file dist/Data.Field.lua
+pslua --foreign-path . --ps-output output --entry Data.Reflectable --lua-output-file dist/Data.Reflectable.lua
+pslua --foreign-path . --ps-output output --entry Data.Bounded --lua-output-file dist/Data.Bounded.lua
+pslua --foreign-path . --ps-output output --entry Data.Function --lua-output-file dist/Data.Function.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid --lua-output-file dist/Data.Monoid.lua
+pslua --foreign-path . --ps-output output --entry Data.Functor --lua-output-file dist/Data.Functor.lua
+pslua --foreign-path . --ps-output output --entry Control.Apply --lua-output-file dist/Control.Apply.lua
+pslua --foreign-path . --ps-output output --entry Data.Bounded.Generic --lua-output-file dist/Data.Bounded.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Generic --lua-output-file dist/Data.Monoid.Generic.lua
+pslua --foreign-path . --ps-output output --entry Control.Applicative --lua-output-file dist/Control.Applicative.lua
+pslua --foreign-path . --ps-output output --entry Control.Bind --lua-output-file dist/Control.Bind.lua
+pslua --foreign-path . --ps-output output --entry Control.Monad --lua-output-file dist/Control.Monad.lua
+pslua --foreign-path . --ps-output output --entry Prelude --lua-output-file dist/Prelude.lua
+pslua --foreign-path . --ps-output output --entry Data.Semigroup.Generic --lua-output-file dist/Data.Semigroup.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Eq.Generic --lua-output-file dist/Data.Eq.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Additive --lua-output-file dist/Data.Monoid.Additive.lua
+pslua --foreign-path . --ps-output output --entry Data.Semiring.Generic --lua-output-file dist/Data.Semiring.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Ring.Generic --lua-output-file dist/Data.Ring.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Semigroup.Last --lua-output-file dist/Data.Semigroup.Last.lua
+pslua --foreign-path . --ps-output output --entry Data.HeytingAlgebra.Generic --lua-output-file dist/Data.HeytingAlgebra.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Conj --lua-output-file dist/Data.Monoid.Conj.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Multiplicative --lua-output-file dist/Data.Monoid.Multiplicative.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Endo --lua-output-file dist/Data.Monoid.Endo.lua
+pslua --foreign-path . --ps-output output --entry Data.Show.Generic --lua-output-file dist/Data.Show.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Semigroup.First --lua-output-file dist/Data.Semigroup.First.lua
+pslua --foreign-path . --ps-output output --entry Data.Ord.Generic --lua-output-file dist/Data.Ord.Generic.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Disj --lua-output-file dist/Data.Monoid.Disj.lua
+pslua --foreign-path . --ps-output output --entry Data.Monoid.Dual --lua-output-file dist/Data.Monoid.Dual.lua
