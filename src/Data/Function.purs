@@ -1,3 +1,8 @@
+-- @inline flip always
+-- @inline const always
+-- @inline apply always
+-- @inline applyFlipped always
+-- @inline on always
 module Data.Function
   ( flip
   , const

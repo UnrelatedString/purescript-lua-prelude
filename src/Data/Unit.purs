@@ -1,3 +1,4 @@
+-- @inline unit always
 module Data.Unit where
 
 -- | The `Unit` type has a single inhabitant, called `unit`. It represents

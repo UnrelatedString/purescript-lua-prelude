@@ -1,3 +1,8 @@
+-- @inline mapFlipped always
+-- @inline void always
+-- @inline voidRight always
+-- @inline voidLeft always
+-- @inline flap always
 module Data.Functor
   ( class Functor
   , map

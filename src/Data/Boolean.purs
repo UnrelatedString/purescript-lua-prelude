@@ -1,3 +1,4 @@
+-- @inline otherwise always
 module Data.Boolean where
 
 -- | An alias for `true`, which can be useful in guard clauses:

@@ -1,3 +1,5 @@
+-- @inline notEq always
+-- @inline notEq1 always
 module Data.Eq
   ( class Eq
   , eq

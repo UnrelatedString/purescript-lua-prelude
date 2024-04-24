@@ -1,3 +1,5 @@
+-- @inline leftDiv always
+-- @inline rightDiv always
 module Data.DivisionRing
   ( class DivisionRing
   , recip

@@ -1,3 +1,4 @@
+-- @inline guard always
 module Data.Monoid
   ( class Monoid
   , mempty

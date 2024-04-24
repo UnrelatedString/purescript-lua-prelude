@@ -1,3 +1,5 @@
+-- @inline abs always
+-- @inline clamp always
 module Data.Ord
   ( class Ord
   , compare

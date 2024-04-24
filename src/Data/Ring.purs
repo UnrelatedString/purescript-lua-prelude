@@ -1,3 +1,4 @@
+-- @inline negate always
 module Data.Ring
   ( class Ring
   , sub
