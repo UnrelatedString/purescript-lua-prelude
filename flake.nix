@@ -24,7 +24,7 @@
               l.lua
               l.luacheck
               p.luaformatter
-              p.nixfmt
+              p.nixfmt-rfc-style
               pslua.packages.${system}.default
               e.purs-0_15_15
               e.purs-tidy
