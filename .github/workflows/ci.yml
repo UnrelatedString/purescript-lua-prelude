@@ -1,32 +1,25 @@
 name: CI
-
-on:
-  push
+on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v4
 
-      - uses: purescript-contrib/setup-purescript@main
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
         with:
-          purescript: "unstable"
+          node-version: "20.x"
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "14.x"
-
-      - name: Install dependencies
+      - name: Set up Purescript and Spago
         run: |
-          npm install -g bower
-          npm install
-          bower install --production
+          npm i -g purescript
+          npm i -g spago@next
 
-      - name: Build source
-        run: npm run-script build
+      - name: Build
+        run: spago build --strict
 
-      - name: Run tests
-        run: |
-          bower install
-          npm run-script test --if-present
+      - name: Test
+        run: spago test --strict
