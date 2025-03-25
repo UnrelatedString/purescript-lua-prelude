@@ -1,21 +1,19 @@
 name: CI
 
 on:
-  push:
-    branches: [master]
-  pull_request:
+  push
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - uses: purescript-contrib/setup-purescript@main
         with:
           purescript: "unstable"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: "14.x"
 
