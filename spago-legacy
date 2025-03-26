@@ -1,2 +1,6 @@
 #!/usr/bin/env sh
-spago-legacy "$@" || spago "$@"
+if spago-legacy --version > /dev/null; then
+  spago-legacy "$@"
+else
+  spago "$@"
+fi
