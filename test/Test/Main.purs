@@ -22,6 +22,16 @@ main = do
     testReflectType
     testReifyType
     testSignum
+    void $ pure $ allZeroes $ Cons 0 NilList
+
+data List a = Cons a (List a) | NilList
+
+class AllZeroes a where
+  allZeroes :: a -> Boolean
+
+instance AllZeroes (List Int) where
+  allZeroes (Cons h t) = h == 0 && allZeroes t
+  allZeroes NilList = true
 
 foreign import testNumberShow :: (Number -> String) -> AlmostEff
 
