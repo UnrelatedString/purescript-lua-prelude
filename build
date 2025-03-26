@@ -1,2 +1,0 @@
-#!/usr/bin/env sh
-./spago-legacy build --purs-args "-g corefn"
