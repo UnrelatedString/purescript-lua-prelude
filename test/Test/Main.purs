@@ -22,7 +22,7 @@ main = do
     testReflectType
     testReifyType
     testSignum
-    void $ pure $ allZeroes $ Cons 0 NilList
+    assert "please" $ allZeroes $ Cons 0 NilList
 
 data List a = Cons a (List a) | NilList
 
