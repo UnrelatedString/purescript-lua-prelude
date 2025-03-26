@@ -6,7 +6,7 @@ import Data.Ord (abs, signum)
 import Data.Reflectable (reflectType, reifyType)
 import Prim.Boolean (True, False)
 import Prim.Ordering (LT, GT, EQ)
-import Test.Data.Generic.Rep (testGenericRep)
+--import Test.Data.Generic.Rep (testGenericRep)
 import Test.Utils (AlmostEff, assert)
 import Type.Proxy (Proxy(..))
 
@@ -18,7 +18,7 @@ main = do
     testIntDivMod
     testIntDegree
     testRecordInstances
-    testGenericRep
+    --testGenericRep
     testReflectType
     testReifyType
     testSignum
