@@ -24,8 +24,11 @@ jobs:
       - name: Download pslua
         run: wget -c https://github.com/Unisay/purescript-lua/releases/download/0.2/pslua-linux_x86_64.tar.gz -O - | tar -xz
 
+      - name: what
+        run: ls
+
       - name: Put pslua on PATH
-        run: realpath ./pslua >> $GITHUB_PATH
+        run: realpath pslua >> $GITHUB_PATH
 
       - name: Build and test
         run: ./test.sh
