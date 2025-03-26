@@ -27,11 +27,8 @@ jobs:
       - name: Put pslua on PATH
         run: realpath pslua >> $GITHUB_PATH
 
-      - name: what
-        run: realpath $GITHUB_PATH
-
-      - name: whattttt
-        run: echo $PATH
+      - name: WHAT??????
+        run: pslua -h
 
       - name: Build and test
         run: ./test.sh
