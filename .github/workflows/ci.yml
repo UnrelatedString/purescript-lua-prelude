@@ -21,11 +21,11 @@ jobs:
           npm i -g purescript
           npm i -g spago-legacy
 
-      - uses: DeterminateSystems/nix-installer-action@main
-      - uses: hannesg/ordinary-nix-cache@v0.1.0
+      - name: Download pslua
+        run: wget -c https://github.com/Unisay/purescript-lua/releases/download/0.2/pslua-linux_x86_64.tar.gz -O - | tar -xz
 
-      - name: Set up pslua
-        run: nix profile install 'github:Unisay/purescript-lua'
+      - name: Put pslua on PATH
+        run: realpath ./pslua >> $GITHUB_PATH
 
       - name: Build and test
         run: ./test.sh
