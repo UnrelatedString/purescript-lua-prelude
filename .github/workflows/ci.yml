@@ -8,6 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install Lua interpreter
+        uses: leafo/gh-actions-lua@v11
+
       - name: Set up Node 20
         uses: actions/setup-node@v4
         with:
