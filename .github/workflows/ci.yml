@@ -16,13 +16,16 @@ jobs:
         with:
           node-version: "20.x"
 
-      - name: Set up Purescript and Spago
+      - name: Set up Purescript and spago-legacy
         run: |
           npm i -g purescript
-          npm i -g spago
+          npm i -g spago-legacy
 
-      - name: Build
-        run: spago build
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: hannesg/ordinary-nix-cache@v0.1.0
 
-      - name: Test
-        run: spago test
+      - name: Set up pslua
+        run: nix profile install 'github:Unisay/purescript-lua'
+
+      - name: Build and test
+        run: ./test.sh
