@@ -28,7 +28,10 @@ jobs:
         run: realpath pslua >> $GITHUB_PATH
 
       - name: what
-        run: cat $GITHUB_PATH
+        run: realpath $GITHUB_PATH
+
+      - name: whattttt
+        run: echo $PATH
 
       - name: Build and test
         run: ./test.sh
