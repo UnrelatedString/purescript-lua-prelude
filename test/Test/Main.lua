@@ -30,7 +30,7 @@ return {
         input = case[0]
         expected = case[1]
         actual = showNumber(input)
-        if expected != actual do
+        if expected ~= actual then
           error("For "..input..", expected "..expected..", got: "..actual..".")
         end
       end
