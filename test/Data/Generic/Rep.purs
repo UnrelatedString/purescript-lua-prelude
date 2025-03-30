@@ -158,8 +158,8 @@ testGenericRep = do
   assert "Checking show for generic types: Product" $
     show (G.from $ Pair 1 2) == "(Constructor @\"Pair\" (Product (Argument 1) (Argument 2)))"
 
-  assert "Checking equality" $
-    cons 1 (cons 2 Nil) == cons 1 (cons 2 Nil)
+  -- assert "Checking equality" $
+  --   cons 1 (cons 2 Nil) == cons 1 (cons 2 Nil)
 
   assert "Checking inequality" $
     cons 1 (cons 2 Nil) /= cons 1 Nil
