@@ -163,6 +163,12 @@ testGenericRep = do
 
   assert "Checking inequality" $
     cons 1 (cons 2 Nil) /= cons 1 Nil
+  
+  assert "Checking deeper inequality" $
+    cons 1 (cons 2 Nil) /= cons 1 (cons 3 Nil)
+  
+  assert "Checking Nil == Nil" $
+    (Nil :: List Int) == Nil
 
   assert "Checking comparison EQ" $
     (Pair Zero (Some One) `compare` Pair Zero (Some One)) == EQ
