@@ -21,7 +21,7 @@ return {
         {1.5e21, "1.5e+21"},
         {1.5e-10, "1.5e-10"},
   
-        {nan, "NaN"},
+        {0/0, "NaN"},
         {math.huge, "Infinity"},
         {-math.huge, "-Infinity"},
       }
@@ -30,14 +30,8 @@ return {
         local input = case[1]
         local expected = case[2]
         local actual = showNumber(input)
-        local safeInput
-        if input == nil then
-          safeInput = "NaN"
-        else
-          safeInput = input
-        end
         if expected ~= actual then
-          error("For "..safeInput..", expected "..expected..", got: "..actual..".")
+          error("For "..input..", expected "..expected..", got: "..actual..".")
         end
       end
     end
