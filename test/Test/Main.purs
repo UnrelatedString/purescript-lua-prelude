@@ -22,6 +22,7 @@ main = do
     testReflectType
     testReifyType
     testSignum
+    testArrays
 
 foreign import testNumberShow :: (Number -> String) -> AlmostEff
 
