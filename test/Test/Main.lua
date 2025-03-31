@@ -1,7 +1,7 @@
 return {
   testNumberShow = (function(showNumber)
     return function()
-      cases = {
+      local cases = {
         {0.0, "0.0"},
         {1.0, "1.0"},
         {-1.0, "-1.0"},
@@ -26,10 +26,10 @@ return {
         {-math.huge, "-Infinity"},
       }
       
-      for case in cases do
-        input = case[0]
-        expected = case[1]
-        actual = showNumber(input)
+      for i, case in pairs(cases) do
+        local input = case[1]
+        local expected = case[2]
+        local actual = showNumber(input)
         if expected ~= actual then
           error("For "..input..", expected "..expected..", got: "..actual..".")
         end
