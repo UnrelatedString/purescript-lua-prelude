@@ -189,3 +189,12 @@ testSignum = do
   assert "signum positive zero" $ show (1.0/(signum 0.0)) == "Infinity"
   assert "Clarifies what 'signum negative zero' test is doing" $ show (1.0/(-0.0)) == "-Infinity"
   assert "signum negative zero" $ show (1.0/(signum (-0.0))) == "-Infinity"
+
+testArrays :: AlmostEff
+testArrays = do
+  assert "Arrays can be equal" $ [1] == [1]
+  assert "Arrays can be unequal" $ [1] == [0]
+  assert "Arrays can be concatenated" $ [1] <> [2] == [1, 2]
+  assert "Array concatenation is associative" $ [1] <> ([2] <> [3]) == ([1] <> [2]) <> [3]
+  assert "mempty is left identity" $ mempty <> ["something"] == ["something"]
+  assert "mempty is right identity" $ [GT] <> mempty == [GT]
