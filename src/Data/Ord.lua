@@ -17,7 +17,23 @@ local unsafeCoerceImpl = function(lt)
 end
 
 return {
-  ordBooleanImpl = (unsafeCoerceImpl),
+  ordBooleanImpl = (function(lt)
+    return function(eq)
+      return function(gt)
+        return function(x)
+          return function(y)
+            if not x and y then
+              return lt
+            elseif x == y then
+              return eq
+            else
+              return gt
+            end
+          end
+        end
+      end
+    end
+  end),
   ordIntImpl = (unsafeCoerceImpl),
   ordNumberImpl = (unsafeCoerceImpl),
   ordStringImpl = (unsafeCoerceImpl),
