@@ -12,7 +12,6 @@ import Type.Proxy (Proxy(..))
 
 main :: AlmostEff
 main = do
-    assert "fuck" false
     testNumberShow show
     testOrderings
     testOrdUtils
@@ -22,7 +21,7 @@ main = do
     --testGenericRep
     testReflectType
     testReifyType
-    --testSignum
+    testSignum
     testArrays
 
 foreign import testNumberShow :: (Number -> String) -> AlmostEff
