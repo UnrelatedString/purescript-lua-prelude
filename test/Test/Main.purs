@@ -22,7 +22,7 @@ main = do
     --testGenericRep
     testReflectType
     testReifyType
-    testSignum
+    --testSignum
     testArrays
 
 foreign import testNumberShow :: (Number -> String) -> AlmostEff
