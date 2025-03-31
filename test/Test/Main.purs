@@ -12,6 +12,7 @@ import Type.Proxy (Proxy(..))
 
 main :: AlmostEff
 main = do
+    assert "fuck" false
     testNumberShow show
     testOrderings
     testOrdUtils
