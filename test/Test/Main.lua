@@ -30,8 +30,14 @@ return {
         local input = case[1]
         local expected = case[2]
         local actual = showNumber(input)
+        local safeInput
+        if input == nil then
+          safeInput = "NaN"
+        else
+          safeInput = input
+        end
         if expected ~= actual then
-          error("For "..input..", expected "..expected..", got: "..actual..".")
+          error("For "..safeInput..", expected "..expected..", got: "..actual..".")
         end
       end
     end
