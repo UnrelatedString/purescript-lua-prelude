@@ -117,9 +117,9 @@ testIntDivMod = do
 testIntDegree :: AlmostEff
 testIntDegree = do
     let bot = bottom :: Int
-    assert "degree returns absolute integers" $ degree (-4) == 4
-    assert "degree returns absolute integers" $ degree 4 == 4
-    assert "degree returns absolute integers" $ degree bot >= 0
+    assert "degree returns absolute integers from negative" $ degree (-4) == 4
+    assert "degree returns absolute integers from positive" $ degree 4 == 4
+    assert "degree returns absolute integers from bottom" $ degree bot >= 0
     assert "degree does not return out-of-bounds integers" $ degree bot <= top
 
 testRecordInstances :: AlmostEff
