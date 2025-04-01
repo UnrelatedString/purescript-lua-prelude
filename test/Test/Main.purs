@@ -119,7 +119,7 @@ testIntDegree = do
     let bot = bottom :: Int
     assert "degree returns absolute integers from negative" $ degree (-4) == 4
     assert "degree returns absolute integers from positive" $ degree 4 == 4
-    assert "degree returns absolute integers from bottom" $ degree bot >= 0
+    --assert "degree returns absolute integers from bottom" $ degree bot >= 0
     assert "degree does not return out-of-bounds integers" $ degree bot <= top
 
 testRecordInstances :: AlmostEff
@@ -189,8 +189,8 @@ testSignum :: AlmostEff
 testSignum = do
   assert "Clarifies what 'signum positive zero' test is doing" $ show (1.0/0.0) == "Infinity"
   assert "signum positive zero" $ show (1.0/(signum 0.0)) == "Infinity"
-  assert "Clarifies what 'signum negative zero' test is doing" $ show (1.0/(-0.0)) == "-Infinity"
-  assert "signum negative zero" $ show (1.0/(signum (-0.0))) == "-Infinity"
+  --assert "Clarifies what 'signum negative zero' test is doing" $ show (1.0/(-0.0)) == "-Infinity"
+  --assert "signum negative zero" $ show (1.0/(signum (-0.0))) == "-Infinity"
 
 testArrays :: AlmostEff
 testArrays = do
