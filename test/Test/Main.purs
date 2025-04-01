@@ -195,7 +195,7 @@ testSignum = do
 testArrays :: AlmostEff
 testArrays = do
   assert "Arrays can be equal" $ [1] == [1]
-  assert "Arrays can be unequal" $ [1] == [0]
+  assert "Arrays can be unequal" $ [1] /= [0]
   assert "Arrays can be concatenated" $ [1] <> [2] == [1, 2]
   assert "Array concatenation is associative" $ [1] <> ([2] <> [3]) == ([1] <> [2]) <> [3]
   assert "mempty is left identity" $ mempty <> ["something"] == ["something"]
