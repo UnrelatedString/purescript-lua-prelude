@@ -3,8 +3,11 @@ return {
   concatArray = (function(xs)
     return function(ys)
       if #xs == 0 then return ys end
-      if #ys == 0 then return xs end
-      return table.concat(xs, ys)
+      local r = xs
+      for i, v in pairs(ys) do
+        r[#xs+i] = v
+      end
+      return r
     end
   end)
 }
