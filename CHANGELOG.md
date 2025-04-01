@@ -10,7 +10,11 @@ New features:
 
 Bugfixes:
 
+- `Semigroup (Array a)` no longer type errors at runtime
+
 Other improvements:
+
+- Ported tests
 
 ## [v6.0.1](https://github.com/purescript/purescript-prelude/releases/tag/v6.0.1) - 2022-08-18
 
