@@ -3,7 +3,10 @@ return {
   concatArray = (function(xs)
     return function(ys)
       if #xs == 0 then return ys end
-      local r = xs
+      local r = {}
+      for i, v in pairs(xs) do
+        r[i] = v
+      end
       for i, v in pairs(ys) do
         r[#xs+i] = v
       end
