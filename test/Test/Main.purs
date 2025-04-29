@@ -23,6 +23,7 @@ main = do
     testReifyType
     testSignum
     testArrays
+    testShowInt
 
 foreign import testNumberShow :: (Number -> String) -> AlmostEff
 
@@ -200,3 +201,7 @@ testArrays = do
   assert "Array concatenation is associative" $ [1] <> ([2] <> [3]) == ([1] <> [2]) <> [3]
   assert "mempty is left identity" $ mempty <> ["something"] == ["something"]
   assert "mempty is right identity" $ [GT] <> mempty == [GT]
+
+testShowInt :: AlmostEff
+testShowInt = do
+  assert "show 1 == \"1\"" $ show 1 == "1"
